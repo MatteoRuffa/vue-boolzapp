@@ -56,14 +56,14 @@
                 </div>
 
 
-                <div class="user-contacts" >
-                    <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id"   @click="activeContactId = contact.id">
+                <div class="user-contacts"  >
+                    <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id"   @click="activeContactId = contact.id" >
                         <div class="d-flex   ">
                             <div class="avatar">
                                 <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" :alt="contact.name">
                             </div>
                             <div class="specifics px-3">
-                                <div>{{contact.name}}</div>
+                                <div>{{ contact.name }}</div>
                                 <div>Ultimo messaggio invato</div>
                             </div>
                         </div>
@@ -76,9 +76,9 @@
             <div class="" id="messages">
                 <div class="toolbar">
                     <div class="user-contact d-flex justify-content-between align-items-center">
-                        <div class="d-flex   ">
+                        <div class="d-flex">
                             <div class="avatar" >
-                                <img class="rounded-circle img-fluid" :src="'../img/' + activeContact.avatar"  alt="contacts.name">
+                                <img class="rounded-circle img-fluid" :src="'../img/' + activeContact.avatar"  :alt="activeContact.name">
                             </div>
                             <div class="specifics px-3">
                                 <div>{{ activeContact.name }}</div>
@@ -105,8 +105,10 @@
                 </div>
 
 
-                <div class="toolbar">
-                    imput
+                <div class="toolbar d-flex gap-4  align-items-center px-4">
+                    <a href="#"><i class="fa-regular fa-face-smile icons"></i></a>
+                    <input class="form-control" type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendMsg">
+                    <a href="#"><i class="fa-solid fa-microphone icons"></i></a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,8 @@ createApp({
     data() {
         return {
             contacts: contacts,
-            activeContactId: 1
+            activeContactId: 1,
+            newMsg: ''
         }
     },
     methods: {
@@ -15,6 +16,18 @@ createApp({
                 return 'sent';
             } else {
                 return 'received';
+            }
+        },
+        sendMsg() {
+            if (!this.newMsg.trim()) return;
+            const contact = this.contacts.find(contact => contact.id === this.activeContactId);
+            if (contact) {
+                contact.messages.push({
+                    date:  new Date().toISOString(),
+                    message: this.newMsg,
+                    status: 'sent'
+                });
+                this.newMsg = '';
             }
         }
     },

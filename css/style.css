@@ -34,6 +34,11 @@ body {
     background: linear-gradient(180deg, var(--mr-bg-primary) 20%, var(--mr-bg-secondary) 20%);
 }
 
+.active {
+    background-color: var(--mr-bg-toolbar);
+}
+
+
 /* CONTACTS */
 #contacts {
     width: 40%;
@@ -111,6 +116,10 @@ body {
     font-weight: 400;
 }
 
+.user-contacts :hover {
+    background-color: var(--mr-bg-toolbar);
+}
+
 /* MESSAGES */
 #messages {
     width: 60%;
@@ -148,6 +157,11 @@ body {
     line-height: 1.2rem;
     font-weight: 400;
 }
+
+textarea.form-control {
+    width: 80%!important;
+}
+
 
 
 
