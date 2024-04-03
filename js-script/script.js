@@ -30,16 +30,10 @@ createApp({
                 this.newMsg = '';
             }
         },
-        findTheHour (){
-            let hours = [];
-            this.contacts.map((contact) => {
-                contact.messages.forEach((message) => {
-                    let hourExact = message.date.split(' ');
-                    hours.push(hourExact[1]);
-                });
-            });
-            console.log(hours);
-        }
+        findTheHour(dateString) {
+            let hourExact = dateString.split(' ');
+            return hourExact[1]; 
+          },
     },
     computed: {
         changeAvatar() {
