@@ -9,12 +9,19 @@
     --mr-graytext: gray;
     --mr-white: #FFFFFF;
     --mr-black: #000000;
+    --mr-msg-send: #D5F9BA;
 }
 
 body {
     /* font-family: "Roboto", sans-serif; */
     font-weight: 500;
     font-style: normal;
+}
+
+/* GENERAL */
+.hour {
+    color: var(--mr-graytext);
+    font-size: 0.8rem;
 }
 
 .mr-debug {
@@ -26,7 +33,6 @@ body {
     height: 100vh;
     background: linear-gradient(180deg, var(--mr-bg-primary) 20%, var(--mr-bg-secondary) 20%);
 }
-
 
 /* CONTACTS */
 #contacts {
@@ -105,10 +111,6 @@ body {
     font-weight: 400;
 }
 
-.hour {
-    color: var(--mr-graytext);
-    font-size: 0.9rem;
-}
 /* MESSAGES */
 #messages {
     width: 60%;
@@ -122,7 +124,27 @@ body {
     height: calc(100% - 140px);
     overflow-y: scroll;
     padding: 20px;
+    background-image: url('../img/mine.jpg');
 }
+
+.msg {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.msg .hour {
+    font-size: 0.7rem;
+}
+
+.send {
+    background-color: var(--mr-msg-send);
+    margin-left: auto;
+}
+
+.received {
+    background-color: var(--mr-white);
+}
+
 
 
 
