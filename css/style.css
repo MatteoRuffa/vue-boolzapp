@@ -40,7 +40,7 @@ body {
 
 .toolbar i {
     color: var(--mr-fontawesome-color);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .toolbar {
     height: 70px;
@@ -114,11 +114,17 @@ body {
     width: 60%;
 }
 
+#messages img {
+    height: 50px;
+}
+
 .chat {
     height: calc(100% - 140px);
     overflow-y: scroll;
     padding: 20px;
 }
+
+
 
 
 
