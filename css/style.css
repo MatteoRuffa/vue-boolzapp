@@ -6,7 +6,7 @@
     --mr-bg-imput: #FAFAFA;
     --mr-bg-active: #E9EBEB;
     --mr-fontawesome-color: #B1B1B1;
-    --mr-graytext: #6A97BB;
+    --mr-graytext: gray;
     --mr-white: #FFFFFF;
     --mr-black: #000000;
 }
@@ -72,6 +72,7 @@ body {
 .notification a {
     color: var(--mr-graytext);
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .searchbar {
@@ -92,9 +93,23 @@ body {
 .user-contacts {
     height: calc(100% - 195px);
     overflow-y: auto;
-    padding: 20px;
 }
 
+.user-contact {
+    border-bottom: 1px solid var(--mr-bg-secondary);
+    padding: 10px  20px;
+}
+
+.user-contact .specifics :last-child{
+    color: var(--mr-graytext);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.hour {
+    color: var(--mr-graytext);
+    font-size: 0.9rem;
+}
 /* MESSAGES */
 #messages {
     width: 60%;
