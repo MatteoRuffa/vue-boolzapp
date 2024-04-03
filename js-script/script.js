@@ -31,12 +31,14 @@ createApp({
             }
         },
         findTheHour (){
-            let hour = this.contacts.flatMap((contact) => {
-                return contact.messages.map((message) => {
-                    let date = new Date(message.date);
-                    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+            let hours = [];
+            this.contacts.map((contact) => {
+                contact.messages.forEach((message) => {
+                    let hourExact = message.date.split(' ');
+                    hours.push(hourExact[1]);
                 });
-            });console.log(hour);
+            });
+            console.log(hours);
         }
     },
     computed: {
