@@ -20,7 +20,7 @@ createApp({
         },
         sendMsg() {
             if (!this.newMsg.trim()) return;
-            const contact = this.contacts.find(contact => contact.id === this.activeContactId);
+            const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
             if (contact) {
                 contact.messages.push({
                     date:  new Date().toISOString(),
@@ -29,6 +29,14 @@ createApp({
                 });
                 this.newMsg = '';
             }
+        },
+        findTheHour (){
+            let hour = this.contacts.flatMap((contact) => {
+                return contact.messages.map((message) => {
+                    let date = new Date(message.date);
+                    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+                });
+            });console.log(hour);
         }
     },
     computed: {

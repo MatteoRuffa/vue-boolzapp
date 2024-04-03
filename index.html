@@ -99,7 +99,7 @@
                     <div class="row-msg py-1" v-for="(message, index) in changeAvatar" :key="index">
                         <div class="msg d-flex justify-content-between" :class="classMsg(message)">
                             <div class="p-3">{{ message.message }}</div>
-                            <div class="hour align-self-end  px-2 ">12:00</div>
+                            <div class="hour align-self-end  px-2 ">{{ findTheHour }}</div>
                         </div>
                     </div>
                 </div>
