@@ -56,11 +56,11 @@
                 </div>
 
 
-                <div class="user-contacts">
+                <div class="user-contacts" >
                     <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id">
                         <div class="d-flex   ">
                             <div class="avatar">
-                                <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" alt="">
+                                <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" :alt="contact.name">
                             </div>
                             <div class="specifics px-3">
                                 <div>{{contact.name}}</div>
