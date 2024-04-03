@@ -136,7 +136,7 @@ body {
     font-size: 0.7rem;
 }
 
-.send {
+.sent {
     background-color: var(--mr-msg-send);
     margin-left: auto;
 }

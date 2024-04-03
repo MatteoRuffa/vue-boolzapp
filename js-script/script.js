@@ -6,14 +6,17 @@ createApp({
     data() {
         return {
             contacts: contacts,
-            activeId: 1
+            activeContactId: 1
         }
     },
     methods: {
             
     },
     computed: {
-        
+        changeAvatar() {
+            const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
+            return contact.messages;
+        }
     },
     mounted() {
         

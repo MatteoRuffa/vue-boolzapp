@@ -57,7 +57,7 @@
 
 
                 <div class="user-contacts" >
-                    <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id">
+                    <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id"   @click="activeContactId = contact.id">
                         <div class="d-flex   ">
                             <div class="avatar">
                                 <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" :alt="contact.name">
@@ -75,7 +75,7 @@
             </div>
             <div class="" id="messages">
                 <div class="toolbar">
-                    <div class="user-contact d-flex justify-content-between align-items-center  ">
+                    <div class="user-contact d-flex justify-content-between align-items-center">
                         <div class="d-flex   ">
                             <div class="avatar">
                                 <img class="rounded-circle img-fluid" src="./img/avatar_1.jpg"  alt="contact.name">
@@ -93,15 +93,18 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="chat">
-                    <div class="row-msg mr-debug ">
-                        <div class="msg mr-debug d-flex justify-content-between  send ">
-                            <div class="p-3 ">message</div>
+                    <div class="row-msg mr-debug py-1" v-for="(message, index) in changeAvatar" :key="index">
+                        <div class="msg mr-debug d-flex justify-content-between" >
+                            <div class="p-3 ">{{ message.message }}</div>
                             <div class="hour align-self-end  px-1 ">12:00</div>
                         </div>
                     </div>
-                    
                 </div>
+
+
                 <div class="toolbar">
                     imput
                 </div>
