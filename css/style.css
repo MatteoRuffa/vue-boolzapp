@@ -12,7 +12,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -35,6 +35,16 @@ body {
 /* CONTACTS */
 #contacts {
     width: 40%;
+    border-right: 1px solid var(--mr-bg-secondary);
+}
+
+#contacts img {
+    height: 50px;
+}
+
+.toolbar i {
+    color: var(--mr-fontawesome-color);
+    font-size: 1.5rem;
 }
 
 .notification {
@@ -45,10 +55,13 @@ body {
 .searchbar {
     height: 50px;
 }
+
 .user-contacts {
     height: calc(100% - 190px);
     overflow-y: auto;
+    padding: 20px;
 }
+
 /* MESSAGES */
 #messages {
     width: 60%;
@@ -57,4 +70,5 @@ body {
 .chat {
     height: calc(100% - 140px);
     overflow-y: auto;
+    padding: 20px;
 }
