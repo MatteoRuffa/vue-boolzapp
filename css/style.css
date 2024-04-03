@@ -26,11 +26,35 @@ body {
     background: linear-gradient(180deg, var(--mr-bg-primary) 20%, var(--mr-bg-secondary) 20%);
 }
 
+.toolbar {
+    height: 70px;
+    background-color: var(--mr-bg-toolbar);
+
+}
+
 /* CONTACTS */
 #contacts {
     width: 40%;
 }
+
+.notification {
+    height: 70px;
+    background-color: var(--mr-bg-notification);
+}
+
+.searchbar {
+    height: 50px;
+}
+.user-contacts {
+    height: calc(100% - 190px);
+    overflow-y: auto;
+}
 /* MESSAGES */
 #messages {
     width: 60%;
+}
+
+.chat {
+    height: calc(100% - 140px);
+    overflow-y: auto;
 }
