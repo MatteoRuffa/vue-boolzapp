@@ -54,20 +54,24 @@
                         <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat">
                       </div>
                 </div>
+
+
                 <div class="user-contacts">
-                    <div class="user-contact d-flex justify-content-between ">
+                    <div class="user-contact d-flex justify-content-between " v-for="(contact, id) in contacts" :key="id">
                         <div class="d-flex   ">
                             <div class="avatar">
-                                <img class="rounded-circle img-fluid" src="./img/avatar_1.jpg" alt="">
+                                <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" alt="">
                             </div>
                             <div class="specifics px-3">
-                                <div class="name">Michele</div>
-                                <div class="last-msg">Ultimo messaggio invato</div>
+                                <div>{{contact.name}}</div>
+                                <div>Ultimo messaggio invato</div>
                             </div>
                         </div>
                         <div class="hour">12:00</div>
                     </div>
                 </div>
+
+
             </div>
             <div class="" id="messages">
                 <div class="toolbar">
