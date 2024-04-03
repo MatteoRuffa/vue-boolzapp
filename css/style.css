@@ -5,14 +5,14 @@
     --mr-bg-notification: #8EDAFC;
     --mr-bg-active: #E9EBEB;
     --mr-fontawesome-color: #B1B1B1;
-    --mr-graytext: #BDCBD9;
+    --mr-graytext: #6A97BB;
     --mr-white: #FFFFFF;
     --mr-black: #000000;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    /* font-family: "Roboto", sans-serif; */
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -43,6 +43,15 @@ body {
 .bell i {
     font-size: 1.5rem;
     color: var(--mr-bg-notification);
+}
+
+.notification :last-child {
+    line-height: 1rem;
+}
+
+.notification a {
+    color: var(--mr-graytext);
+    font-size: 0.9rem;
 }
 
 /* CONTACTS */
