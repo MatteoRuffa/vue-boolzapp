@@ -123,12 +123,12 @@ body {
 .chat {
     height: calc(100% - 140px);
     overflow-y: scroll;
-    padding: 20px 100px;
+    padding: 20px 60px;
     background-image: url('../img/mine.jpg');
 }
 
 .msg {
-    width: 200px;
+    width: 300px;
     border-radius: 10px;
 }
 
@@ -139,10 +139,14 @@ body {
 .sent {
     background-color: var(--mr-msg-send);
     margin-left: auto;
+    line-height: 1.2rem;
+    font-weight: 400;
 }
 
 .received {
     background-color: var(--mr-white);
+    line-height: 1.2rem;
+    font-weight: 400;
 }
 
 

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="p-4" id="app">
+    <div class="py-4" id="app">
         <div class="container h-100 p-0 bg-white d-flex">
             <div class="" id="contacts">
                 <div class="toolbar p-2 d-flex align-items-center justify-content-between ">
@@ -77,11 +77,11 @@
                 <div class="toolbar">
                     <div class="user-contact d-flex justify-content-between align-items-center">
                         <div class="d-flex   ">
-                            <div class="avatar">
-                                <img class="rounded-circle img-fluid" src="./img/avatar_1.jpg"  alt="contact.name">
+                            <div class="avatar" >
+                                <img class="rounded-circle img-fluid" :src="'../img/' + activeContact.avatar"  alt="contacts.name">
                             </div>
                             <div class="specifics px-3">
-                                <div>Michele</div>
+                                <div>{{ activeContact.name }}</div>
                                 <div>Ultimo accesso oggi alle 12:00</div>
                             </div>
                         </div> 
@@ -96,10 +96,10 @@
 
 
                 <div class="chat">
-                    <div class="row-msg mr-debug py-1" v-for="(message, index) in changeAvatar" :key="index">
-                        <div class="msg mr-debug d-flex justify-content-between" :class="classMsg(message)">
+                    <div class="row-msg py-1" v-for="(message, index) in changeAvatar" :key="index">
+                        <div class="msg d-flex justify-content-between" :class="classMsg(message)">
                             <div class="p-3">{{ message.message }}</div>
-                            <div class="hour align-self-end  px-1 ">12:00</div>
+                            <div class="hour align-self-end  px-2 ">12:00</div>
                         </div>
                     </div>
                 </div>

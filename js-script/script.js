@@ -22,6 +22,10 @@ createApp({
         changeAvatar() {
             const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
             return contact.messages;
+        },
+        activeContact() {
+            const contact = this.contacts.find(contact => contact.id === this.activeContactId);
+            return contact;
         }
     },
     mounted() {
