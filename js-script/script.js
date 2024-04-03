@@ -10,7 +10,13 @@ createApp({
         }
     },
     methods: {
-            
+        classMsg(msg) {
+            if (msg.status === 'sent') {
+                return 'sent';
+            } else {
+                return 'received';
+            }
+        }
     },
     computed: {
         changeAvatar() {
