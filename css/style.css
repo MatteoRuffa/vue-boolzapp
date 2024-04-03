@@ -1,0 +1,21 @@
+:root {
+    --mr-bg-primary: #009688;
+    --mr-bg-secondary: #DDDBD2;
+    --mr-bg-toolbar: #EAEAEA;
+    --mr-bg-notification: #8EDAFC;
+    --mr-bg-active: #E9EBEB;
+    --mr-fontawesome-color: #B1B1B1;
+    --mr-graytext: #BDCBD9;
+    --mr-white: #FFFFFF;
+    --mr-black: #000000;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.mr-debug {
+    border: 1px solid red;
+}
