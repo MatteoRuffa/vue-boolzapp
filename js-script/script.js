@@ -31,12 +31,9 @@ createApp({
             }
         },
         findTheHour(dateString) {
-            let date = new Date(dateString);
-            let hours = date.getHours();
-            let minutes = date.getMinutes();
-            let seconds = date.getSeconds();
-            return `${hours}:${minutes}:${seconds}`; 
-        }
+            let hourExact = dateString.split(' ');
+            return hourExact[1]; 
+          },
     },
     computed: {
         changeAvatar() {
