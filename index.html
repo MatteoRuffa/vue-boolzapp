@@ -52,13 +52,14 @@
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
-                        <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat"  >
+                        <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat"  v-model="searchText">
                       </div>
                 </div>
 
 
-                <div class="user-contacts"  >
-                    <div class="user-contact d-flex justify-content-between " :class="{'active' : activeContactId === contact.id}" v-for="(contact, id) in contacts" :key="id"   @click="activeContactId = contact.id" >
+                <div class="user-contacts">
+                    <div class="alert alert-danger" v-if="filteredContact.length < 1">Non ci sono elementi per la tua ricerca</div>
+                    <div class="user-contact d-flex justify-content-between " :class="{'active' : activeContactId === contact.id}" v-for="(contact, id) in filteredContact" :key="id"   @click="activeContactId = contact.id" >
                         <div class="d-flex   ">
                             <div class="avatar">
                                 <img class="rounded-circle img-fluid" :src="'./img/' + contact.avatar" :alt="contact.name">
