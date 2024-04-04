@@ -11,7 +11,8 @@ createApp({
             activeContactId: 1,
             newMsg: '',
             searchText: '',
-            openedMenuIndex: null
+            openedMenuIndex: null,
+            showMsg: false
         }
     },
     methods: {
@@ -59,11 +60,12 @@ createApp({
             const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
             contact.messages.splice(index, 1);
         },
-        // findLastMsg(){
-        //     const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
-        //     const lastMsg = contact.messages[contact.messages.length - 1];
-        //     return lastMsg.date;
-        // }
+        showOnlyMsg() {
+            this.showMsg = true;
+        },
+        showOnlyContact(){
+            this.showMsg = false;
+        }
     },
     computed: {
         changeAvatar() {
