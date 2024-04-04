@@ -58,6 +58,11 @@ createApp({
         deleteMsg(index) {
             const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
             contact.messages.splice(index, 1);
+        },
+        findLastMsg(){
+            const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
+            const lastMsg = contact.messages[contact.messages.length - 1];
+            return lastMsg.date;
         }
     },
     computed: {
@@ -71,7 +76,7 @@ createApp({
         },
         filteredContact(){		
             return this.contacts.filter((el) => el.name.toLowerCase().includes(this.searchText.toLowerCase()));
-        }
+        },
     },
     mounted() {
        
