@@ -10,7 +10,8 @@ createApp({
             contacts: contacts,
             activeContactId: 1,
             newMsg: '',
-            searchText: ''
+            searchText: '',
+            showMenu: false
         }
     },
     methods: {
@@ -43,7 +44,17 @@ createApp({
         findTheHour(dateString) {
             let hourExact = dateString.split(' ');
             return hourExact[1]; 
-          },
+        },
+        toggleMenu() {
+            this.showMenu = !this.showMenu;
+            document.addEventListener('click', this.closeMenu);
+        },
+        closeMenu(event) {
+            if (!this.$refs.dropdown.contains(event.target)) {
+              this.showMenu = false;
+              document.removeEventListener('click', this.closeMenu);
+            }
+        },
     },
     computed: {
         changeAvatar() {
