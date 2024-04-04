@@ -97,6 +97,9 @@ createApp({
                 }
             });
         return result;
+        },
+        isMsgNotEmpty() {
+            return this.newMsg.trim().length > 0;
         }
     },
     mounted() {
