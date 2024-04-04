@@ -125,6 +125,7 @@
                     <a href="#"><i class="fa-regular fa-face-smile icons"></i></a>
                     <input class="form-control" type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendMsg">
                     <a href="#"><i class="fa-solid fa-microphone icons"></i></a>
+                    <a href="#" v-show="newMsg.length > 0" class="d-block"><i class="fa-regular fa-paper-plane"></i></a>
                 </div>
             </div>
         </div>
