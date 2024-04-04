@@ -33,6 +33,7 @@
                         </div>
                     </div>
                     <div class="icons d-flex gap-4 pe-3 ">
+                        <a href="#"><i class="fa-solid fa-toggle-off"></i></a>
                         <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
                         <a href="#"><i class="fa-solid fa-message"></i></a>
                         <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
@@ -66,10 +67,10 @@
                             </div>
                             <div class="specifics px-3">
                                 <div>{{ contact.name }}</div>
-                                <div v-if="findLastMsg[contact.id]"> {{ 'Ultimo messaggio invato' + findLastMsg[contact.id] }}</div>
+                                <div v-if="findLastMsg[contact.id]"> {{ 'Ultimo messaggio invato' }}</div>
                             </div>
                         </div>
-                        <div class="hour">12:00</div>
+                        <div class="hour">{{ findLastMsg[contact.id] }}</div>
                     </div>
                 </div>
 
@@ -106,8 +107,8 @@
                         <div class="msg d-flex justify-content-between" :class="classMsg(message)">
                             <div class="p-3">{{ message.message }}</div>
                             <div class="align-self-baseline px-2" ref="dropdown" @click.stop="toggleMenu">
-                                <!-- <i class="fa-solid fa-chevron-down"></i> -->
                                 <div class="btn-group" ref="dropdown">
+                                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
                                     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" :class="{'sent': message.status === 'sent', 'received': message.status === 'received'}" @click.stop="toggleMenu(index)"></button>
                                     <ul class="dropdown-menu" :class="{ show: openedMenuIndex === index }">
                                         <li><a class="dropdown-item" href="#">Message info</a></li>

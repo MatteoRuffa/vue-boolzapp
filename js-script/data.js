@@ -176,6 +176,6 @@ export const autoAnswer = [
     'Sssso  nnno sssbbroannzo marciooo.',
     'Sto prgrammando, ti AMMAZZO se mi scrivi di nuovo!',
     'E lasciami in pace!',
-    'Ho un gioco nuovo, ci sentiamo tra un mese!',
+    'Ho un gioco per il pc nuovo, ci sentiamo tra un mese!',
     'Sono latitante in Messico, forse è meglio che non mi scrivi più!'
 ]
