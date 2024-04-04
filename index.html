@@ -106,10 +106,8 @@
                             <div class="align-self-baseline px-2" ref="dropdown" @click.stop="toggleMenu">
                                 <!-- <i class="fa-solid fa-chevron-down"></i> -->
                                 <div class="btn-group" ref="dropdown">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"  @click.stop="toggleMenu">
-                                        <span class="visually-hidden">Toggle Dropdown</span>
-                                    </button>
-                                    <ul class="dropdown-menu" :class="{ show: showMenu }" >
+                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" :class="{'sent': message.status === 'sent', 'received': message.status === 'received'}" @click.stop="toggleMenu(index)"></button>
+                                    <ul class="dropdown-menu" :class="{ show: openedMenuIndex === index }">
                                         <li><a class="dropdown-item" href="#">Message info</a></li>
                                         <li><a class="dropdown-item" href="#">Delete message</a></li>
                                     </ul>

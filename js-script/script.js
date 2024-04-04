@@ -11,7 +11,7 @@ createApp({
             activeContactId: 1,
             newMsg: '',
             searchText: '',
-            showMenu: false
+            openedMenuIndex: null
         }
     },
     methods: {
@@ -45,13 +45,13 @@ createApp({
             let hourExact = dateString.split(' ');
             return hourExact[1]; 
         },
-        toggleMenu() {
-            this.showMenu = !this.showMenu;
+        toggleMenu(index) {
+            this.openedMenuIndex = this.openedMenuIndex === index ? null : index;
             document.addEventListener('click', this.closeMenu);
         },
-        closeMenu(event) {
+        closeMenu() {
             if (!this.$refs.dropdown) {
-              this.showMenu = false;
+              this.openedMenuIndex = null;
               document.removeEventListener('click', this.closeMenu);
             }
         },
@@ -70,9 +70,7 @@ createApp({
         }
     },
     mounted() {
-        document.addEventListener('click', this.closeMenu);
+       
     },
-    beforeDestroy() {
-        document.removeEventListener('click', this.closeMenu);
-      },
+
 }).mount('#app');

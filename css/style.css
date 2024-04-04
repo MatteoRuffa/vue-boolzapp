@@ -138,6 +138,21 @@ body {
     background-image: url('../img/mine.jpg');
 }
 
+.chat .btn-group {
+    position: relative;
+}
+
+.chat .btn-group button {
+    
+    position: absolute;
+    top: -10px; 
+    right: -60px;
+    padding: 0!important;
+    font-size: 1.5rem;
+    border: 0px solid var(--mr-msg-send);
+    color: var(--mr-black);
+}
+
 .msg {
     width: 300px;
     border-radius: 10px;
@@ -159,22 +174,15 @@ body {
     line-height: 1.2rem;
     font-weight: 400;
 }
-/* 
-.dropdown-container {
-    position: relative;
-} */
- .position-relative {
-    position: relative;
-  }
-  
+ 
 .dropdown-menu {
     position: absolute;
-     top: 100%; 
-     right: 0; 
-     width: 200px;
+    top: 100%; 
+    right: -60px; 
+    width: 200px;
     background-color: #fff;
     z-index: 1000;
-  } 
+} 
 
 
 
