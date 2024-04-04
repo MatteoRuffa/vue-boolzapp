@@ -45,7 +45,8 @@ body {
     border-right: 1px solid var(--mr-bg-secondary);
 }
 
-#contacts img {
+#contacts .avatar {
+    width: 50px;
     height: 50px;
 }
 
@@ -125,8 +126,9 @@ body {
     width: 60%;
 }
 
-#messages img {
+#messages .avatar {
     height: 50px;
+    width: 50px;
 }
 
 .chat {
@@ -156,10 +158,6 @@ body {
     background-color: var(--mr-white);
     line-height: 1.2rem;
     font-weight: 400;
-}
-
-textarea.form-control {
-    width: 80%!important;
 }
 
 
