@@ -169,3 +169,13 @@ export const contacts = [
         ],
     }
 ]
+
+export const autoAnswer = [
+    'Non posso rispondere, sto rapinando una banca.',
+    'Sto entrando in un vulcano, ci sentiamo forse domani.',
+    'Sssso  nnno sssbbroannzo marciooo.',
+    'Sto prgrammando, ti AMMAZZO se mi scrivi di nuovo!',
+    'E lasciami in pace!',
+    'Ho un gioco nuovo, ci sentiamo tra un mese!',
+    'Sono latitante in Messico, forse è meglio che non mi scrivi più!'
+]

@@ -1,4 +1,5 @@
 import {contacts} from './data.js';
+import {autoAnswer} from './data.js';
 
 const dt = luxon.DateTime;
 
@@ -13,7 +14,8 @@ createApp({
             searchText: '',
             openedMenuIndex: null,
             showMsg: false,
-            widthViewport: window.innerWidth
+            widthViewport: window.innerWidth,
+            autoAnswer: autoAnswer
         }
     },
     methods: {
@@ -37,7 +39,7 @@ createApp({
                 setTimeout(() => {
                     contact.messages.push({
                         date:  new Date().toLocaleString(),
-                        message: 'ok',
+                        message: this.casualAnswer(),
                         status: 'received'
                     });
                 },1000)
@@ -74,6 +76,10 @@ createApp({
         },
         updatesViewportWidth () {
             this.widthViewport = window.innerWidth;
+        },
+        casualAnswer() {
+            const random = Math.floor(Math.random() * this.autoAnswer.length);
+            return this.autoAnswer[random];
         }
     },
     computed: {
