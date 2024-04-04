@@ -12,7 +12,8 @@ createApp({
             newMsg: '',
             searchText: '',
             openedMenuIndex: null,
-            showMsg: false
+            showMsg: false,
+            widthViewport: window.innerWidth
         }
     },
     methods: {
@@ -61,10 +62,18 @@ createApp({
             contact.messages.splice(index, 1);
         },
         showOnlyMsg() {
-            this.showMsg = true;
+            if(this.widthViewport <= 992) {
+                this.showMsg = true;
+            }
+            
         },
         showOnlyContact(){
-            this.showMsg = false;
+            if (this.widthViewport <= 992) {
+                this.showMsg = false;
+            }
+        },
+        updatesViewportWidth () {
+            this.widthViewport = window.innerWidth;
         }
     },
     computed: {
@@ -91,7 +100,10 @@ createApp({
         }
     },
     mounted() {
-       
+        window.addEventListener('resize', this.updatesViewportWidth);
     },
+    unmounted () {
+        window.addEventListener('resize', this.updatesViewportWidth);
+    }
 
 }).mount('#app');
