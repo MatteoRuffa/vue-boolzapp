@@ -55,6 +55,10 @@ createApp({
               document.removeEventListener('click', this.closeMenu);
             }
         },
+        deleteMsg(index) {
+            const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
+            contact.messages.splice(index, 1);
+        }
     },
     computed: {
         changeAvatar() {

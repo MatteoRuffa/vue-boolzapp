@@ -109,7 +109,7 @@
                                     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" :class="{'sent': message.status === 'sent', 'received': message.status === 'received'}" @click.stop="toggleMenu(index)"></button>
                                     <ul class="dropdown-menu" :class="{ show: openedMenuIndex === index }">
                                         <li><a class="dropdown-item" href="#">Message info</a></li>
-                                        <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                        <li><a class="dropdown-item" href="#" @click="deleteMsg(index)">Delete message</a></li>
                                     </ul>
                                 </div>
                             </div>

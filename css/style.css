@@ -143,14 +143,18 @@ body {
 }
 
 .chat .btn-group button {
-    
     position: absolute;
     top: -10px; 
     right: -60px;
     padding: 0!important;
     font-size: 1.5rem;
     border: 0px solid var(--mr-msg-send);
-    color: var(--mr-black);
+    color:var(--mr-fontawesome-color);
+    border-radius: 5px;
+}
+
+.chat .btn-group button :hover {
+    border-radius: 20px;
 }
 
 .msg {
