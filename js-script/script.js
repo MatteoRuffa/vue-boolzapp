@@ -59,11 +59,11 @@ createApp({
             const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
             contact.messages.splice(index, 1);
         },
-        findLastMsg(){
-            const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
-            const lastMsg = contact.messages[contact.messages.length - 1];
-            return lastMsg.date;
-        }
+        // findLastMsg(){
+        //     const contact = this.contacts.find((contact) => contact.id === this.activeContactId);
+        //     const lastMsg = contact.messages[contact.messages.length - 1];
+        //     return lastMsg.date;
+        // }
     },
     computed: {
         changeAvatar() {
@@ -77,6 +77,16 @@ createApp({
         filteredContact(){		
             return this.contacts.filter((el) => el.name.toLowerCase().includes(this.searchText.toLowerCase()));
         },
+        findLastMsg() {
+            let result = {};
+            this.contacts.forEach(contact => {
+                const lastSentMsg = contact.messages.slice().reverse().find(msg => msg.status === 'received');
+                if (lastSentMsg) {
+                    result[contact.id] = this.findTheHour(lastSentMsg.date);
+                }
+            });
+        return result;
+        }
     },
     mounted() {
        
