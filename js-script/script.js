@@ -50,7 +50,7 @@ createApp({
             document.addEventListener('click', this.closeMenu);
         },
         closeMenu(event) {
-            if (!this.$refs.dropdown.contains(event.target)) {
+            if (!this.$refs.dropdown) {
               this.showMenu = false;
               document.removeEventListener('click', this.closeMenu);
             }
@@ -70,6 +70,9 @@ createApp({
         }
     },
     mounted() {
-        
-    }
+        document.addEventListener('click', this.closeMenu);
+    },
+    beforeDestroy() {
+        document.removeEventListener('click', this.closeMenu);
+      },
 }).mount('#app');
